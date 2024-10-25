@@ -20,20 +20,7 @@ Welcome to the **Finance Loan Default Prediction Web App**! This application hel
 
 This repository contains all necessary resources to understand, develop, and deploy the Finance Loan Default Prediction Web App.
 
-```plaintext
-📦loan-default-prediction-app
- ┣ 📂notebooks
- ┃ ┣ 📜LoanPredict(unbalanced).ipynb
- ┃ ┣ 📜DefaultPredict(balanced).ipynb
- ┣ 📂models
- ┃ ┗ 📜loan_default_model.joblib
- ┣ 📂api
- ┃ ┗ 📜app.py
- ┣ 📜requirements.txt
- ┣ 📜README.md
- ┗ 📜LICENSE
-```
-
+-**dataset/**: Dataset files used for training model
 - **notebooks/**: Jupyter notebooks that walk through data preprocessing, model training, tuning, and financial advice generation.
 - **models/**: Contains the trained model saved in `joblib` format.
 - **api/**: Contains resources for deploying the model as an API on OnDemand by Airev.
