@@ -1,6 +1,3 @@
-Here's a README file you can directly copy and paste into your `README.md` file:
-
-```markdown
 # 📊 Finance Loan Default Prediction App
 
 Welcome to the **Finance Loan Default Prediction App**! This application helps financial institutions and users predict the likelihood of loan defaults using machine learning models. Additionally, it provides tailored financial advice based on the prediction results, making it a comprehensive tool for financial health and risk management.
