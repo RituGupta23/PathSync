@@ -1,6 +1,6 @@
 # 📊 Finance Loan Default Prediction App
 
-Welcome to the **Finance Loan Default Prediction App**! This application helps financial institutions and users predict the likelihood of loan defaults using machine learning models. Additionally, it provides tailored financial advice based on the prediction results, making it a comprehensive tool for financial health and risk management.
+Welcome to the **Finance Loan Default Prediction Web App**! This application helps financial institutions and users predict the likelihood of loan defaults using machine learning models. Additionally, it provides tailored financial advice based on the prediction results, making it a comprehensive tool for financial health and risk management.
 
 ---
 
@@ -18,15 +18,13 @@ Welcome to the **Finance Loan Default Prediction App**! This application helps f
 
 ## 🗂️ Project Structure
 
-This repository contains all necessary resources to understand, develop, and deploy the Finance Loan Default Prediction App.
+This repository contains all necessary resources to understand, develop, and deploy the Finance Loan Default Prediction Web App.
 
 ```plaintext
 📦loan-default-prediction-app
  ┣ 📂notebooks
- ┃ ┣ 📜1_data_preprocessing.ipynb
- ┃ ┣ 📜2_model_training_evaluation.ipynb
- ┃ ┣ 📜3_model_tuning_export.ipynb
- ┃ ┗ 📜4_financial_advice_generation.ipynb
+ ┃ ┣ 📜LoanPredict(unbalanced).ipynb
+ ┃ ┣ 📜DefaultPredict(balanced).ipynb
  ┣ 📂models
  ┃ ┗ 📜loan_default_model.joblib
  ┣ 📂api
