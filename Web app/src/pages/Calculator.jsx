@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -45,15 +44,21 @@ function Calculator() {
       return;
     }
 
+    // Prepare data for API call using parseFloat
+    const parsedInput = Object.keys(input).reduce((acc, key) => {
+      acc[key] = parseFloat(input[key]);
+      return acc;
+    }, {});
+
     try {
       const response = await axios.post(
         'https://f1e0-106-194-118-25.ngrok-free.app/predict',
-        input,
+        parsedInput,
         { headers: { 'Content-Type': 'application/json' } }
       );
 
       setResult(response.data);
-      console.log(result);
+      console.log(response.data); // Log the response data
       setLoading(false);
     } catch (error) {
       console.error('Error submitting data:', error);
