@@ -1,7 +1,0 @@
-﻿pandas
-numpy
-scikit-learn
-matplotlib
-gitpython
-joblib
-git-lfs
