@@ -44,11 +44,11 @@ const Home = () => (
         <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8">
           <div className="bg-gray-900 p-6 rounded-lg shadow-md">
             <p className="text-gray-300 italic">"FinTrack transformed my financial planning. Knowing my risk before applying saved me from potential financial setbacks!"</p>
-            <p className="text-orange-400 mt-3 font-semibold">- Alex R.</p>
+            <p className="text-orange-400 mt-3 font-semibold">- Ritu</p>
           </div>
           <div className="bg-gray-900 p-6 rounded-lg shadow-md">
             <p className="text-gray-300 italic">"The insights from FinTrack are clear and help me make smarter financial choices."</p>
-            <p className="text-orange-400 mt-3 font-semibold">- Jamie L.</p>
+            <p className="text-orange-400 mt-3 font-semibold">- Piyush</p>
           </div>
         </div>
       </div>

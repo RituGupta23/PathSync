@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Calculator from './pages/Calculator';
 import Home from './pages/Home';
 import Chatbot from './pages/Chatbot';
+import FinTrackDocumentation from './pages/FinTrackDocumentation';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
           <Route path="/predictor" element={<Calculator />} />
           <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/docs" element={<FinTrackDocumentation />} />
         </Routes>
       </div>
     </Router>

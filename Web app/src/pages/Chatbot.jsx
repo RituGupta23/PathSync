@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa';
 
-const apiKey = process.env.REACT_APP_API_KEY;
-const externalUserId = process.env.REACT_APP_EXTERNAL_USER_ID;
+const apiKey = import.meta.env.VITE_API_KEY;
+const externalUserId = import.meta.env.VITE_EXTERNAL_USER_ID;
 
 const Chatbot = () => {
   const [sessionId, setSessionId] = useState(null);
@@ -24,12 +24,16 @@ const Chatbot = () => {
       setSessionId(id);
     } catch (error) {
       console.error('Error creating chat session:', error);
+      alert("Failed to create chat session. Please try again."); // User feedback
     }
   };
 
   // Function to submit a query
   const submitQuery = async () => {
-    if (!sessionId || !query) return;
+    if (!sessionId || !query.trim()) {
+      alert("Please enter a question."); // Feedback for empty input
+      return;
+    }
     setLoading(true);
     setBotTyping(true);
     try {
@@ -43,14 +47,21 @@ const Chatbot = () => {
         },
         { headers: { apikey: apiKey } }
       );
-      const answer = response.data.data.answer;
-      setResponses((prevResponses) => [
-        ...prevResponses,
-        { query, response: answer },
-      ]);
-      setQuery('');
+
+      // Ensure that the response contains the expected data
+      if (response.data && response.data.data) {
+        const answer = response.data.data.answer;
+        setResponses((prevResponses) => [
+          ...prevResponses,
+          { query, response: answer },
+        ]);
+        setQuery('');
+      } else {
+        throw new Error("Unexpected response format");
+      }
     } catch (error) {
       console.error('Error submitting query:', error);
+      alert("There was an error. Please try again."); // Error feedback
     } finally {
       setLoading(false);
       setBotTyping(false);

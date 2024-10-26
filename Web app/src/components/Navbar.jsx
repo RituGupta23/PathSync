@@ -45,6 +45,14 @@ const Navbar = () => {
             ChatBot
             <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </Link>
+
+          <Link
+            to="/docs"
+            className="hover:text-orange-400 transition-colors relative group text-lg"
+          >
+            Docs
+            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,6 +91,14 @@ const Navbar = () => {
             className="block py-2 text-lg text-gray-300 hover:text-orange-400 transition-colors"
           >
             ChatBot
+          </Link>
+
+          <Link
+            to="/docs"
+            onClick={toggleMenu}
+            className="block py-2 text-lg text-gray-300 hover:text-orange-400 transition-colors"
+          >
+            Documentation
           </Link>
         </div>
       )}
