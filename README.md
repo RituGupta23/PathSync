@@ -80,7 +80,3 @@ To run the app, make sure you have the following dependencies installed:
 Contributions are welcome! Feel free to open an issue or submit a pull request for any improvements or new features.
 
 ---
-
-## 📧 Contact
-
-For questions, reach out at [kartishsbhadauria@gmail.com](mailto:kartishsbhadauria@gmail.com).
